@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Joshua & Hazel Wedding</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="images/INVI-1.jpg" rel="icon">
+</head>
+
+<body>
+
+<!-- INTRO -->
+
+<div class="intro" id="intro">
+
+<div class="intro-card">
+
+<h1>Joshua & Hazel</h1>
+<p class="subtitle">We're getting married!</p>
+
+<div id="countdown" class="countdown"></div>
+
+<button id="openBtn">Open Invitation</button>
+
+</div>
+
+</div>
+
+
+<!-- BACKGROUND ELEMENTS -->
+
+<div class="background">
+<div class="petals"></div>
+<div class="lights"></div>
+</div>
+
+
+<!-- INVITATION BOOK -->
+
+<div class="book">
+
+<section class="page first-page">
+
+<div class="frame">
+
+<span class="tape"></span>
+
+<img src="images/INVI-1.jpg">
+
+<span class="leaf leaf1"></span>
+<span class="leaf leaf2"></span>
+
+</div>
+
+</section>
+
+<div class="scrap"></div>
+
+<section class="page">
+
+<div class="frame">
+
+<span class="tape"></span>
+
+<img src="images/INVI-2.jpg">
+
+<span class="leaf leaf1"></span>
+<span class="leaf leaf2"></span>
+
+</div>
+
+</section>
+
+<div class="scrap"></div>
+
+<section class="page">
+
+<div class="frame">
+
+<span class="tape"></span>
+
+<img src="images/INVI-3.jpg">
+
+<span class="leaf leaf1"></span>
+<span class="leaf leaf2"></span>
+
+</div>
+
+</section>
+
+<div class="scrap"></div>
+
+<section class="page">
+
+<div class="frame">
+
+<span class="tape"></span>
+
+<img src="images/INVI-4.jpg">
+
+<span class="leaf leaf1"></span>
+<span class="leaf leaf2"></span>
+
+</div>
+
+</section>
+
+<div class="scrap"></div>
+
+<section class="page">
+
+<div class="frame">
+
+<span class="tape"></span>
+
+<img src="images/INVI-5.jpg">
+
+<span class="leaf leaf1"></span>
+<span class="leaf leaf2"></span>
+
+</div>
+
+</section>
+
+<div class="scrap"></div>
+<!-- RSVP Reminder Page -->
+<section class="page">
+  <div class="frame rsvp-frame">
+    <!-- Decorative floating leaves -->
+    <span class="leaf leaf1"></span>
+    <span class="leaf leaf2"></span>
+    <span class="leaf leaf3"></span>
+    
+    <h2 style="color:#8d5b48; text-align:center; margin-bottom:15px;">RSVP Reminder</h2>
+    
+    <p style="font-size:16px; color:#a37963; text-align:center; margin-bottom:10px;">
+      We are excited to celebrate our wedding with you!
+    </p>
+    
+    <p style="font-size:16px; color:#a37963; text-align:center; margin-bottom:10px;">
+      Please confirm your attendance by <strong>April 10, 2026</strong>.
+    </p>
+    
+    <p style="font-size:16px; color:#a37963; text-align:center; margin-bottom:20px;">
+      You may send us your confirmation via Messenger. Our Facebook links are below:
+    </p>
+    
+    <p style="font-size:16px; text-align:center; margin-bottom:5px;">
+      <a href="https://www.facebook.com/josh.almoete" target="_blank" style="color:#b07e67; text-decoration:none;">Joshua's Messenger</a>
+    </p>
+    
+    <p style="font-size:16px; text-align:center;">
+     <a href="https://www.facebook.com/hazel.may.hernandez" target="_blank" style="color:#b07e67; text-decoration:none;">Hazel's Messenger</a>
+    </p>
+    
+    <!-- Decorative swirl at bottom -->
+    <div class="rsvp-swirl"></div>
+  </div>
+</section>
+
+</div>
+
+<audio id="bgMusic" loop>
+<source src="music/LOVE.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+<style>
+ /* Highlight last page */
+.page:last-child .frame {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #e1bfae;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+  transform: rotate(0deg);
+  position: relative;
+  overflow: hidden;
+  padding: 40px 30px;
+}
+
+/* Floating leaves inside RSVP frame */
+.rsvp-frame .leaf {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle,#e7c7a9,#caa483);
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(8px);
+  animation: float 8s infinite ease-in-out;
+}
+
+.rsvp-frame .leaf1 {top:-20px; left:-10px;}
+.rsvp-frame .leaf2 {bottom:-20px; right:-10px;}
+.rsvp-frame .leaf3 {top:50%; left:90%;}
+
+/* Subtle swirl decoration */
+.rsvp-frame .rsvp-swirl {
+  position: absolute;
+  bottom:10px;
+  left:50%;
+  width:200px;
+  height:50px;
+  background: radial-gradient(circle, rgba(255,192,203,0.2), transparent);
+  border-radius:50%;
+  transform:translateX(-50%) rotate(-15deg);
+}
+
+/* Floating animation (reuse your leaf float) */
+@keyframes float{
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-12px);}
+  100% {transform: translateY(0);}
+}
+</style>
